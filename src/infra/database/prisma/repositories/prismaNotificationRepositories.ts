@@ -10,7 +10,7 @@ export class PrismaNotificationRepository implements NotificationRepository {
   async create(notification: Notification): Promise<void> {
     await this.prismaService.notification.create({
       data: {
-        id: notification.id, // como o id não tem no notification se ele ta no construtor com uuid?
+        id: notification.id,
         category: notification.category,
         content: notification.content.value,
         recipientId: notification.recipientId,

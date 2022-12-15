@@ -15,6 +15,10 @@ export class Notification {
     };
   }
 
+  public get id(): string {
+    return this._id;
+  }
+
   public set recipientId(recipientId: string) {
     this.recipientId = recipientId;
   }
