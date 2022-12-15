@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NotificationDTO } from 'src/app/entities/Interfaces/INotificationInterface';
+import { Notification } from 'src/app/entities/notification';
 import { NotificationRepository } from 'src/app/entities/repositories/NotificationRepository';
 import { PrismaService } from '../database';
 
@@ -7,7 +7,7 @@ import { PrismaService } from '../database';
 export class PrismaNotificationRepository implements NotificationRepository {
   constructor(private prismaService: PrismaService) {}
 
-  async create(notification: NotificationDTO): Promise<void> {
+  async create(notification: Notification): Promise<void> {
     await this.prismaService.notification.create({
       data: {
         id: notification.id,

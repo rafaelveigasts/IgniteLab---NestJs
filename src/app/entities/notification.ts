@@ -4,19 +4,27 @@ import { NotificationDTO } from './Interfaces/INotificationInterface';
 import { randomUUID } from 'node:crypto';
 
 export class Notification {
-  private data: NotificationDTO;
   private _id: string;
+  private data: NotificationDTO;
 
   constructor(data: Replace<NotificationDTO, { createdAt?: Date }>) {
     this._id = randomUUID();
     this.data = {
       ...data,
-      createdAt: data.createdAt || new Date(),
+      createdAt: data.createdAt ?? new Date(),
     };
   }
 
   public get id(): string {
     return this._id;
+  }
+
+  public set recipientId(recipientId: string) {
+    this.recipientId = recipientId;
+  }
+
+  public get recipientId(): string {
+    return this.data.recipientId;
   }
 
   public set content(content: Content) {
@@ -49,13 +57,5 @@ export class Notification {
 
   public get createdAt(): Date {
     return this.data.createdAt;
-  }
-
-  public set recipientId(recipientId: string) {
-    this.recipientId = recipientId;
-  }
-
-  public get recipientId(): string {
-    return this.data.recipientId;
   }
 }
