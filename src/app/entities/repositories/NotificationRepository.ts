@@ -1,5 +1,5 @@
-import { NotificationDTO } from '../../entities/Interfaces/INotificationInterface';
+import { Notification } from '../../entities/notification';
 
 export abstract class NotificationRepository {
-  abstract create(notification: NotificationDTO): Promise<void>;
+  abstract create(notification: Notification): Promise<void>;
 }

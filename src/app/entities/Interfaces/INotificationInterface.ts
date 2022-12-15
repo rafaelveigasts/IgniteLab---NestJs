@@ -1,10 +1,9 @@
 import { Content } from '../content';
 
 export interface NotificationDTO {
-  id?: any;
+  recipientId: string;
   content: Content;
   category: string;
   readAt?: Date | null;
   createdAt: Date;
-  recipientId: string;
 }
