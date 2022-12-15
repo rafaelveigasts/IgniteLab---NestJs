@@ -1,4 +1,4 @@
-import { InMemoryNotificationsRepositoryMock } from '../../../test/repositories/InMemoryNotificationsRepository';
+import { InMemoryNotificationsRepositoryMock } from '@test/repositories/InMemoryNotificationsRepository';
 import { SendNotification } from './SendNotificationUseCase';
 
 describe('Send notification', () => {

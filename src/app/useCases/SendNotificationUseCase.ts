@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Content } from '../entities/content';
-import { SendNotificationRequest } from '../entities/Interfaces/ISendNotificationRequest';
-import { SendNotificationResponse } from '../entities/Interfaces/ISendNotificationResponse';
-import { Notification } from '../entities/notification';
-import { NotificationRepository } from '../entities/repositories/NotificationRepository';
+import { Content } from '@entities/content';
+import { SendNotificationRequest } from '@Interfaces/ISendNotificationRequest';
+import { SendNotificationResponse } from '@Interfaces/ISendNotificationResponse';
+import { Notification } from '@entities/notification';
+import { NotificationRepository } from '@repositories/NotificationRepository';
 
 @Injectable()
 export class SendNotification {

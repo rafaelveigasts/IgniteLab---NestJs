@@ -1,5 +1,5 @@
-import { NotificationDTO } from '../../src/app/entities/Interfaces/INotificationInterface';
-import { NotificationRepository } from '../../src/app/entities/repositories/NotificationRepository';
+import { NotificationDTO } from '@Interfaces/INotificationInterface';
+import { NotificationRepository } from '@repositories/NotificationRepository';
 
 export class InMemoryNotificationsRepositoryMock
   implements NotificationRepository
